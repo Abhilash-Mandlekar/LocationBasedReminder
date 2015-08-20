@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/reminder_view">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <EditText
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:hint="Subject of reminder@abhilash"
+                android:id="@+id/editText" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="What is it above??"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editText2" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText3"
+                    android:hint="enter location abhi"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <TextView
+                    android:paddingTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TimePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="114dp"
+                    android:id="@+id/timePicker"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:paddingTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <DatePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datePicker"
+                    android:layout_gravity="center_horizontal" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="save reminder"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
