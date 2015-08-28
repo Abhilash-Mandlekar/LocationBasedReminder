@@ -1,14 +1,17 @@
 package com.example.abhilash.reminder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.content.ClipData;
 import android.content.Context;
 import android.database.DataSetObserver;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 //import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +24,12 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.view.ViewGroup;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -33,7 +42,8 @@ public class MainActivity extends ActionBarActivity {
 
     public static ArrayList<String> reminders =new ArrayList<String>() ;
     public static String sub;
-
+    public static String des;
+    public static String loc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,19 +65,19 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.reminder_ui);
     }
 
-    public void saveReminder(View view)
-    {
-        EditText text = (EditText) findViewById(R.id.subject);
-        sub = text.getText().toString();
-        reminders.add(sub);
-        /*//setContentView(R.layout.text_view_reminder);
-        ArrayAdapter rem = new ArrayAdapter<String>(this,R.layout.text_view_reminder, R.id.list_item,reminders);
-        ListView lv = (ListView) findViewById(R.id.list_item);
-        lv.setAdapter( rem);*/
-        setContentView(R.layout.dummy_layout);
-        getFragmentManager().beginTransaction()
-                .add(R.id.container,new ListReminder())
-                .commit();
+    public void saveReminder(View view) throws IOException {
+
+
+        EditText text1 = (EditText) findViewById(R.id.subject);
+        sub = text1.getText().toString();
+        EditText text2 = (EditText) findViewById(R.id.description);
+        des = text2.getText().toString();
+        EditText text3 = (EditText) findViewById(R.id.location);
+        loc = text3.getText().toString();
+
+
+        startActivity(new Intent(MainActivity.this, Database.class));
+
     }
 
     @Override
