@@ -27,12 +27,12 @@
                         android:hint="What is it above??"
                         android:inputType="textMultiLine"
                         android:ems="10"
-                        android:id="@+id/editText2" />
+                        android:id="@+id/description" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/editText3"
+                        android:id="@+id/location"
                         android:hint="enter location abhi"
                         android:layout_gravity="center_horizontal"
                         />
