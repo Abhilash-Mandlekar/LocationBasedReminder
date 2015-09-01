@@ -24,6 +24,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -75,7 +76,6 @@ public class MainActivity extends ActionBarActivity {
         EditText text3 = (EditText) findViewById(R.id.location);
         loc = text3.getText().toString();
 
-
         startActivity(new Intent(MainActivity.this, Database.class));
 
     }
@@ -94,5 +94,6 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
 }
