@@ -66,6 +66,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.reminder_ui);
     }
 
+
     public void saveReminder(View view) throws IOException {
 
 
@@ -78,6 +79,12 @@ public class MainActivity extends ActionBarActivity {
 
         startActivity(new Intent(MainActivity.this, Database.class));
 
+    }
+
+    public void viewReminders(View view)
+    {
+
+        startActivity(new Intent(MainActivity.this, Existing.class));
     }
 
     @Override

@@ -35,10 +35,10 @@ import java.util.List;
  */
 public class Database extends Activity {
 
-    ArrayList<String> Sub = new ArrayList<String>();
-    ArrayList<String> Des = new ArrayList<String>();
-    ArrayList<String> Loc = new ArrayList<String>();
-    ArrayAdapter<String> reminderAdapter;
+     ArrayList<String> Sub = new ArrayList<String>();
+     ArrayList<String> Des = new ArrayList<String>();
+     ArrayList<String> Loc = new ArrayList<String>();
+     ArrayAdapter<String> reminderAdapter;
     Button cancel_btn, delete_btn;
     SQLiteDatabase  myDB = null;
     @Override
@@ -165,7 +165,6 @@ public class Database extends Activity {
             }
         }
     }
-
 
 }
 

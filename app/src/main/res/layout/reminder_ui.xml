@@ -18,13 +18,13 @@
                     <EditText
                     android:layout_width="match_parent"
                     android:layout_height="78dp"
-                    android:hint="Subject of reminder@abhilash"
+                    android:hint="Enter item"
                     android:id="@+id/subject" />
 
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:hint="What is it above??"
+                        android:hint="What is it about??"
                         android:inputType="textMultiLine"
                         android:ems="10"
                         android:id="@+id/description" />
@@ -33,7 +33,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/location"
-                        android:hint="enter location abhi"
+                        android:hint="enter location "
                         android:layout_gravity="center_horizontal"
                         />
 
