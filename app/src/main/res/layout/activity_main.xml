@@ -34,7 +34,9 @@
         android:text="Click on the button to add reminder"
         android:textAlignment="center"
         android:textSize="18dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:id="@+id/textView2" />
+
 
     <Button
         android:layout_width="match_parent"
@@ -42,5 +44,20 @@
         android:layout_alignParentBottom="true"
         android:layout_weight="1"
         android:onClick="addReminder"
-        android:text="click here to Add Reminder" />
+        android:text="click here to Add Reminder"
+        android:id="@+id/button" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="view reminders"
+        android:onClick="viewReminders"
+        android:id="@+id/button2"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/b_viewRem" />
+
+
 </RelativeLayout>
